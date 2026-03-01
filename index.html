@@ -115,256 +115,131 @@
             transform: scale(1.05);
         }
 
-        /* Enhanced Cutscene Overlay - Cinematic Experience */
+        /* Professional Cutscene Overlay - Clean Text Only */
         #cutsceneOverlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(ellipse at center, #0a0a1a 0%, #000000 100%);
+            background: #000;
             z-index: 200;
             display: none;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            animation: cutsceneFadeIn 1.5s ease-out;
         }
 
         #cutsceneContent {
             position: relative;
-            max-width: 900px;
-            padding: 40px;
-            background: linear-gradient(135deg, 
-                rgba(20, 20, 40, 0.9) 0%, 
-                rgba(10, 10, 30, 0.95) 50%, 
-                rgba(20, 20, 40, 0.9) 100%);
-            border: 2px solid rgba(255, 215, 0, 0.3);
-            border-radius: 20px;
-            box-shadow: 
-                0 0 50px rgba(255, 215, 0, 0.2),
-                inset 0 0 30px rgba(255, 215, 0, 0.1);
-            backdrop-filter: blur(10px);
-            animation: contentSlideIn 1s ease-out 0.5s both;
+            max-width: 800px;
+            padding: 20px;
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
         }
 
         #cutsceneImage {
-            width: 500px;
-            height: 350px;
-            margin-bottom: 30px;
-            border: 4px solid rgba(255, 215, 0, 0.5);
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 
-                0 10px 40px rgba(0, 0, 0, 0.5),
-                inset 0 0 20px rgba(255, 215, 0, 0.2);
-            position: relative;
-            animation: imageGlow 3s ease-in-out infinite alternate;
-        }
-
-        #cutsceneImage::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, 
-                #ffd700, #ffed4e, #ffd700, #ffed4e, #ffd700);
-            border-radius: 15px;
-            z-index: -1;
-            animation: borderRotate 4s linear infinite;
+            display: none;
         }
 
         #cutsceneText {
             color: #fff;
-            font-size: 1.6rem;
+            font-size: 1.2rem;
             text-align: center;
-            max-width: 800px;
-            line-height: 2.2;
-            padding: 20px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-            font-weight: 400;
-            letter-spacing: 0.5px;
-            min-height: 100px;
+            max-width: 700px;
+            line-height: 1.6;
+            padding: 0;
+            text-shadow: none;
+            font-weight: normal;
+            letter-spacing: normal;
+            min-height: auto;
             position: relative;
         }
 
         #cutsceneText::after {
-            content: '▋';
-            color: #ffd700;
-            animation: cursorBlink 1s infinite;
-            font-weight: bold;
+            display: none;
         }
 
         .speaker-name {
             display: block;
-            font-size: 1.2rem;
-            color: #ffd700;
-            margin-bottom: 15px;
-            font-weight: bold;
+            font-size: 1rem;
+            color: #ccc;
+            margin-bottom: 10px;
+            font-weight: normal;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            letter-spacing: 1px;
+            text-shadow: none;
         }
 
         #continuePrompt {
             position: absolute;
-            bottom: 40px;
+            bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
-            color: rgba(255, 255, 255, 0.6);
+            color: #666;
             font-size: 0.9rem;
             text-align: center;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 15px 25px;
-            border-radius: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            animation: promptFadeIn 1s ease-out 1s both;
+            background: transparent;
+            padding: 10px 20px;
+            border-radius: 0;
+            border: 1px solid #333;
+            backdrop-filter: none;
+            animation: none;
         }
 
         #skipBtn {
             position: absolute;
-            bottom: 40px;
-            right: 40px;
-            padding: 15px 30px;
-            background: linear-gradient(135deg, rgba(255, 0, 0, 0.9) 0%, rgba(200, 0, 0, 0.9) 100%);
+            bottom: 30px;
+            right: 30px;
+            padding: 8px 16px;
+            background: #333;
             color: #fff;
-            border: 2px solid rgba(255, 0, 0, 0.8);
-            border-radius: 12px;
+            border: 1px solid #666;
+            border-radius: 0;
             font-family: 'Cinzel', serif;
-            font-weight: 700;
-            font-size: 1rem;
+            font-weight: normal;
+            font-size: 0.9rem;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: none;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            box-shadow: 
-                0 6px 20px rgba(255, 0, 0, 0.4),
-                inset 0 0 15px rgba(255, 255, 255, 0.2);
-            animation: skipButtonPulse 2s ease-in-out infinite;
-            backdrop-filter: blur(5px);
+            letter-spacing: 1px;
+            box-shadow: none;
+            animation: none;
+            backdrop-filter: none;
         }
 
         #skipBtn:hover {
-            transform: translateY(-2px);
-            box-shadow: 
-                0 8px 25px rgba(255, 0, 0, 0.6),
-                inset 0 0 20px rgba(255, 255, 255, 0.3);
-            background: linear-gradient(135deg, rgba(255, 50, 50, 0.95) 0%, rgba(220, 0, 0, 0.95) 100%);
+            background: #555;
+            border-color: #888;
+            transform: none;
+            box-shadow: none;
         }
 
-        /* Cutscene animations */
-        @keyframes cutsceneFadeIn {
-            from {
-                opacity: 0;
-                background: radial-gradient(ellipse at center, #000000 0%, #000000 100%);
-            }
-            to {
-                opacity: 1;
-                background: radial-gradient(ellipse at center, #0a0a1a 0%, #000000 100%);
-            }
-        }
-
-        @keyframes contentSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px) scale(0.95);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        @keyframes imageGlow {
-            from {
-                box-shadow: 
-                    0 10px 40px rgba(0, 0, 0, 0.5),
-                    inset 0 0 20px rgba(255, 215, 0, 0.2);
-            }
-            to {
-                box-shadow: 
-                    0 10px 40px rgba(0, 0, 0, 0.5),
-                    inset 0 0 30px rgba(255, 215, 0, 0.4);
-            }
-        }
-
-        @keyframes borderRotate {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes cursorBlink {
-            0%, 50% {
-                opacity: 1;
-            }
-            51%, 100% {
-                opacity: 0;
-            }
-        }
-
-        @keyframes promptFadeIn {
-            from {
-                opacity: 0;
-                transform: translateX(-50%) translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(-50%) translateY(0);
-            }
-        }
-
-        @keyframes skipButtonPulse {
-            0%, 100% {
-                transform: scale(1);
-                box-shadow: 
-                    0 6px 20px rgba(255, 0, 0, 0.4),
-                    inset 0 0 15px rgba(255, 255, 255, 0.2);
-            }
-            50% {
-                transform: scale(1.05);
-                box-shadow: 
-                    0 8px 25px rgba(255, 0, 0, 0.6),
-                    inset 0 0 20px rgba(255, 255, 255, 0.3);
-            }
-        }
-
-        /* Episode title styling */
+        /* Clean episode title styling */
         .episode-title {
-            font-size: 2.5rem;
-            color: #ffd700;
+            font-size: 1.5rem;
+            color: #fff;
             text-align: center;
-            margin-bottom: 20px;
-            font-weight: bold;
+            margin-bottom: 15px;
+            font-weight: normal;
             text-transform: uppercase;
-            letter-spacing: 4px;
-            text-shadow: 
-                0 0 30px rgba(255, 215, 0, 0.5),
-                0 0 60px rgba(255, 215, 0, 0.3);
-            animation: titleShine 3s ease-in-out infinite;
+            letter-spacing: 2px;
+            text-shadow: none;
         }
 
         .episode-subtitle {
-            font-size: 1.2rem;
-            color: #888;
+            font-size: 1rem;
+            color: #ccc;
             text-align: center;
-            margin-bottom: 30px;
-            font-style: italic;
-            letter-spacing: 2px;
+            margin-bottom: 20px;
+            font-style: normal;
+            letter-spacing: 1px;
         }
 
-        @keyframes titleShine {
-            0%, 100% {
+        @keyframes glow {
+            0% {
                 text-shadow: 
                     0 0 30px rgba(255, 215, 0, 0.5),
                     0 0 60px rgba(255, 215, 0, 0.3);
@@ -4164,10 +4039,10 @@
             // Main floor platform
             addPlatform(0, 500, 1400, 100);
 
-            // Puzzle 1: Riddle Door
+            // Puzzle 1: Easy Ant Quiz
             const riddle1 = new Interactable(200, 460, 60, 40, 'riddle', {
-                question: "I have cities, but no houses live there. I have mountains, but no trees. I have water, but no fish. What am I?",
-                answer: "map",
+                question: " EASY ANT QUIZ 1 \n\nHow many legs do ants have?\n\n All insects have the same number of legs!",
+                answer: "6",
                 solved: false
             });
             const door1 = new Interactable(400, 400, 50, 100, 'door');
@@ -4187,11 +4062,11 @@
 
             interactables.push(riddle1, door1);
 
-            // Puzzle 2: Fun Math Puzzle
+            // Puzzle 2: Ant Colony Math
             const mathPuzzle = new Interactable(600, 460, 60, 40, 'mathPuzzle', {
-                question: "If 3 ants can carry 3 crumbs in 3 minutes, how many ants are needed to carry 100 crumbs in 100 minutes?",
-                answer: "3",
-                hint: "Think about the rate - it's a trick question!",
+                question: " EASY ANT QUIZ 2 \n\nIf one ant can carry 10 times its weight, how many ants are needed to carry 100 crumbs?\n\n Each ant carries 10 crumbs!",
+                answer: "10",
+                hint: "100 crumbs ÷ 10 crumbs per ant = 10 ants!",
                 solved: false
             });
             const door2 = new Interactable(800, 400, 50, 100, 'door');
@@ -4214,11 +4089,11 @@
             // Checkpoint
             interactables.push(new Interactable(500, 450, 24, 50, 'checkpoint'));
 
-            // Puzzle 3: Logic Puzzle
+            // Puzzle 3: Ant Fun Facts
             const logicPuzzle = new Interactable(1000, 460, 60, 40, 'logicPuzzle', {
-                question: "Three ants are walking in a line. The first ant says 'All of us are liars.' The second ant says nothing. The third ant says 'The first ant is telling the truth.' Who is telling the truth?",
-                answer: "none",
-                hint: "Think about paradoxes",
+                question: " EASY ANT QUIZ 3 \n\nWhat do ants use to communicate with each other?\n\n They leave chemical trails for other ants to follow!",
+                answer: "smell",
+                hint: "Think about how ants follow each other in lines!",
                 solved: false
             });
             const door3 = new Interactable(1200, 400, 50, 100, 'door');
@@ -4238,11 +4113,11 @@
 
             interactables.push(logicPuzzle, door3);
 
-            // Puzzle 4: Final Riddle
+            // Puzzle 4: Final Ant Challenge
             const finalRiddle = new Interactable(1300, 460, 60, 40, 'finalRiddle', {
-                question: "I am the beginning of eternity, the end of time and space. I am the beginning of every end, and the end of every place. What am I?",
-                answer: "e",
-                hint: "Look for a single letter",
+                question: " FINAL ANT CHALLENGE \n\nWhat is the leader of an ant colony called?\n\n She lays all the eggs for the colony!",
+                answer: "queen",
+                hint: "Just like Queen Sita in our story!",
                 solved: false
             });
             const finalDoor = new Interactable(1350, 400, 50, 100, 'door');
@@ -5422,7 +5297,6 @@
 
             document.getElementById('cutsceneOverlay').style.display = 'flex';
             document.getElementById('hud').style.display = 'none';
-
             showCinematicBars(true);
             showCutsceneSlide();
         }
@@ -5436,225 +5310,13 @@
             const slide = currentCutscene[cutsceneIndex];
 
             if (slide.isTitle) {
-                document.getElementById('cutsceneText').innerHTML = `
-                    <div class="episode-title">${slide.text.split(':')[0]}</div>
-                    <div class="episode-subtitle">${slide.text.split(':')[1] || ''}</div>
-                `;
-
-                // Title images based on episode - using emoji art
-                const titleImages = {
-                    'EPISODE I': `
-                <div style="font-size: 3rem; color: #8b7355; text-align: center; font-family: monospace;">
-                    🏔️⛰️🗻️<br>
-                    ⬇️⬇️⬇️<br>
-                    🕳️🕳️🕳️<br>
-                    🐜🐜🐜
-                </div>
-            `,
-                    'EPISODE II': `
-                <div style="font-size: 3rem; color: #ffd700; text-align: center; font-family: monospace;">
-                    🔮✨🔮<br>
-                    🧩🧩🧩<br>
-                    🗝️🗝️🗝️<br>
-                    ✨🔮✨
-                </div>
-            `,
-                    'EPISODE III': `
-                <div style="font-size: 3rem; color: #ff4500; text-align: center; font-family: monospace;">
-                    🏃‍♂️💨🏃‍♂️<br>
-                    ⚡⚡⚡<br>
-                    🔥🔥🔥<br>
-                    💨🏃‍♂️💨
-                </div>
-            `,
-                    'FINAL EPISODE': `
-                <div style="font-size: 3rem; color: #ff0000; text-align: center; font-family: monospace;">
-                    ⚔️👑⚔️<br>
-                    🛡️🗡️🛡️<br>
-                    🔥🔥🔥<br>
-                    👑⚔️👑
-                </div>
-            `
-                };
-
-                const episodeKey = slide.text.split(':')[0];
-                document.getElementById('cutsceneImage').innerHTML = titleImages[episodeKey] || `
-            <div style="color: #ffd700; font-size: 2rem;">⚔️</div>
-        `;
-
+                document.getElementById('cutsceneText').innerHTML = slide.text;
             } else {
-                // Typewriter effect
-                typewriterText = slide.text;
-                typewriterIndex = 0;
-                document.getElementById('cutsceneText').textContent = '';
-
-                // Add speaker name if present
+                // Normal text display (no typewriter)
                 if (slide.speaker) {
-                    document.getElementById('cutsceneText').innerHTML = 
-                        `<span class="speaker-name">${slide.speaker}</span>`;
-                    typewriterText = slide.text;
-                }
-
-                // Context-aware images based on text content - using emoji art
-                let imageContent = '';
-
-                if (slide.text.includes('ANTHERA') || slide.text.includes('thriving ant civilization')) {
-                    imageContent = `
-                <div style="color: #ffd700; text-align: center; font-family: monospace;">
-                    <div style="font-size: 2rem;">🏰🏰🏰</div>
-                    <div style="font-size: 1.5rem;">🐜👑🐜</div>
-                    <div style="font-size: 1rem;">✨🏛️✨</div>
-                    <div style="color: #8b7355; font-size: 0.8rem; margin-top: 10px;">The Golden Colony</div>
-                </div>
-            `;
-                } else if (slide.text.includes('Queen Sita')) {
-                    imageContent = `
-                <div style="color: #ffd700; text-align: center;">
-                    <div style="font-size: 3rem;">👑</div>
-                    <div style="font-size: 1.2rem; color: #ff69b4;">Queen Sita</div>
-                    <div style="font-size: 1rem;">🌸🌸🌸</div>
-                </div>
-            `;
-                } else if (slide.text.includes('darkness invaded') || slide.text.includes('fire ant')) {
-                    imageContent = `
-                <div style="color: #ff4500; text-align: center; font-family: monospace;">
-                    <div style="font-size: 2rem;">🔥🔥🔥</div>
-                    <div style="font-size: 1.5rem;">🐜⚔️🐜</div>
-                    <div style="color: #8b0000;">Fire Ant Warriors</div>
-                </div>
-            `;
-                } else if (slide.text.includes('General Ravana')) {
-                    imageContent = `
-                <div style="color: #ff0000; text-align: center;">
-                    <div style="font-size: 3rem;">⚔️</div>
-                    <div style="font-size: 1.5rem;">👹👹👹</div>
-                    <div style="color: #8b0000;">General Ravana</div>
-                </div>
-            `;
-                } else if (slide.text.includes('captured the Queen')) {
-                    imageContent = `
-                <div style="color: #666; text-align: center;">
-                    <div style="font-size: 2rem;">⛓️⛓️⛓️</div>
-                    <div style="font-size: 1.5rem;">👑😢👑</div>
-                    <div style="color: #8b0000;">Captured!</div>
-                </div>
-            `;
-                } else if (slide.text.includes('young worker ant')) {
-                    imageContent = `
-                <div style="color: #4a90d9; text-align: center;">
-                    <div style="font-size: 2rem;">🐜</div>
-                    <div style="font-size: 1rem;">Our Hero</div>
-                    <div style="color: #ffd700;">⚔️🛡️</div>
-                </div>
-            `;
-                } else if (slide.text.includes('underground tunnels') || slide.text.includes('caverns')) {
-                    imageContent = `
-                <div style="color: #1a1a2e; text-align: center; font-family: monospace;">
-                    <div style="font-size: 2rem;">🕳️🕳️🕳️</div>
-                    <div style="font-size: 1.5rem;">⬇️⬇️⬇️</div>
-                    <div style="color: #666;">Dark Depths</div>
-                </div>
-            `;
-                } else if (slide.text.includes('lower tunnels') || slide.text.includes('caverns')) {
-                    imageContent = `
-                <div style="color: #8b7355; text-align: center;">
-                    <div style="font-size: 2rem;">🏔️⛰️</div>
-                    <div style="font-size: 1.5rem;">🕳️🕳️🕳️</div>
-                    <div style="color: #666;">The Descent</div>
-                </div>
-            `;
-                } else if (slide.text.includes('ELDER ANT')) {
-                    imageContent = `
-                <div style="color: #ffd700; text-align: center;">
-                    <div style="font-size: 2rem;">🦉</div>
-                    <div style="font-size: 1.2rem;">🧓🐜🧓</div>
-                    <div style="color: #8b7355;">Wise Elder</div>
-                </div>
-            `;
-                } else if (slide.text.includes('Puzzle Chamber')) {
-                    imageContent = `
-                <div style="color: #ffd700; text-align: center; font-family: monospace;">
-                    <div style="font-size: 2rem;">🧩🔮🧩</div>
-                    <div style="font-size: 1.5rem;">🗝️✨🗝️</div>
-                    <div style="color: #8b7355;">Ancient Mysteries</div>
-                </div>
-            `;
-                } else if (slide.text.includes('ANCIENT SPIRIT')) {
-                    imageContent = `
-                <div style="color: rgba(255, 215, 0, 0.7); text-align: center;">
-                    <div style="font-size: 3rem;">👻</div>
-                    <div style="font-size: 1.5rem;">✨👻✨</div>
-                    <div style="color: #ffd700;">Ancient Spirit</div>
-                </div>
-            `;
-                } else if (slide.text.includes('race') || slide.text.includes('outrun')) {
-                    imageContent = `
-                <div style="color: #ff4500; text-align: center;">
-                    <div style="font-size: 2rem;">🏃‍♂️💨</div>
-                    <div style="font-size: 1.5rem;">⚡⚡⚡</div>
-                    <div style="color: #8b0000;">Race Against Time!</div>
-                </div>
-            `;
-                } else if (slide.text.includes('throne room')) {
-                    imageContent = `
-                <div style="color: #8b0000; text-align: center;">
-                    <div style="font-size: 2rem;">👑⚔️👑</div>
-                    <div style="font-size: 1.5rem;">🛡️🗡️🛡️</div>
-                    <div style="color: #ff0000;">Final Battle!</div>
-                </div>
-            `;
-                } else if (slide.speaker === 'GENERAL RAVANA') {
-                    imageContent = `
-                <div style="color: #ff0000; text-align: center;">
-                    <div style="font-size: 3rem;">👹</div>
-                    <div style="font-size: 1.5rem; color: #8b0000;">General Ravana</div>
-                    <div style="font-size: 1rem;">⚔️🔥⚔️</div>
-                </div>
-            `;
-                } else if (slide.speaker === 'NARRATOR') {
-                    imageContent = `
-                <div style="color: #666; text-align: center;">
-                    <div style="font-size: 2rem;">📜</div>
-                    <div style="font-size: 1.5rem;">📖📜📖</div>
-                    <div style="color: #8b7355;">Narrator</div>
-                </div>
-            `;
-                } else if (slide.speaker === 'YOU') {
-                    imageContent = `
-                <div style="color: #4a90d9; text-align: center;">
-                    <div style="font-size: 3rem;">🐜</div>
-                    <div style="font-size: 1.5rem;">⚔️🛡️⚔️</div>
-                    <div style="color: #ffd700;">Hero Ant</div>
-                </div>
-            `;
+                    document.getElementById('cutsceneText').innerHTML = `${slide.speaker}: ${slide.text}`;
                 } else {
-                    // Default decorative image using emoji
-                    imageContent = `
-                <div style="color: #666; font-size: 1rem; text-align: center;">
-                    <div style="font-size: 2rem;">✨</div>
-                    <div style="font-size: 1rem;">⚔️🐜⚔️</div>
-                    <div style="font-size: 0.8rem;">The Ant Chronicles</div>
-                </div>
-            `;
-                }
-
-                document.getElementById('cutsceneImage').innerHTML = imageContent;
-            }
-        }
-
-        function updateTypewriter(dt) {
-            if (typewriterTimer > 0.03 && typewriterIndex < typewriterText.length) {
-                typewriterTimer = 0;
-                typewriterIndex++;
-                
-                const currentText = typewriterText.substring(0, typewriterIndex);
-                const speakerElement = document.querySelector('.speaker-name');
-                
-                if (speakerElement) {
-                    document.getElementById('cutsceneText').innerHTML = 
-                        speakerElement.outerHTML + currentText;
-                } else {
-                    document.getElementById('cutsceneText').textContent = currentText;
+                    document.getElementById('cutsceneText').textContent = slide.text;
                 }
             }
         }
@@ -5676,14 +5338,9 @@
             }
             lastSpaceTime = currentTime;
 
-            if (typewriterIndex < typewriterText.length) {
-                // Skip to end of current text
-                typewriterIndex = typewriterText.length;
-                document.getElementById('cutsceneText').textContent = typewriterText;
-            } else {
-                cutsceneIndex++;
-                showCutsceneSlide();
-            }
+            // Text is already fully displayed, just advance to next slide
+            cutsceneIndex++;
+            showCutsceneSlide();
         }
 
         function endCutscene() {
@@ -5694,9 +5351,6 @@
             // Reset cutscene state
             currentCutscene = null;
             cutsceneIndex = 0;
-            typewriterText = '';
-            typewriterIndex = 0;
-            typewriterTimer = 0;
 
             // Execute callback if it exists
             if (cutsceneCallback) {
@@ -5870,7 +5524,7 @@
             const levelDeath = deathMessages[currentLevel] || deathMessages[1];
             const randomMessage = levelDeath.messages[Math.floor(Math.random() * levelDeath.messages.length)];
             
-            document.getElementById('deathTitle').textContent = levelDeath.title;
+            document.getElementById('deathTitle').textContent = "You Died";
             document.getElementById('deathMessage').textContent = randomMessage;
             
             camera.addShake(10, 0.5);
@@ -6009,11 +5663,6 @@
 
             // Start game loop
             requestAnimationFrame(gameLoop);
-
-            // Typewriter update
-            setInterval(() => {
-                updateTypewriter(0.016);
-            }, 16);
         }
         init();
     </script>
